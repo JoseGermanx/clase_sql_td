@@ -35,20 +35,35 @@ INSERT INTO Clientes (nombre, email, pais) VALUES
 ('Ana Torres', 'ana@email.com', 'Chile'),
 ('Luis Pérez', 'luis@email.com', 'Argentina'),
 ('María Gómez', 'maria@email.com', 'Chile'),
-('Carlos Díaz', 'carlos@email.com', 'Perú');
+('Carlos Díaz', 'carlos@email.com', 'Perú'),
+('Sofía Rojas', 'sofia@email.com', 'Chile'),
+('Diego Martínez', 'diego@email.com', 'México'),
+('Lucía Fernández', 'lucia@email.com', 'Argentina'),
+('Pedro Castillo', 'pedro@email.com', 'Perú'),
+('Valentina López', 'valentina@email.com', 'Chile');
 
 INSERT INTO Productos (nombre, categoria, precio) VALUES
 ('Laptop', 'Electrónica', 1200.00),
 ('Auriculares', 'Electrónica', 150.00),
 ('Silla de oficina', 'Muebles', 200.00),
 ('Mouse', 'Electrónica', 40.00),
-('Escritorio', 'Muebles', 350.00);
+('Escritorio', 'Muebles', 350.00),
+('Teclado mecánico', 'Electrónica', 180.00),
+('Monitor 27 pulgadas', 'Electrónica', 450.00),
+('Lámpara de escritorio', 'Muebles', 60.00),
+('Tablet', 'Electrónica', 300.00),
+('Biblioteca', 'Muebles', 500.00);
 
 INSERT INTO Ordenes (fecha, id_cliente) VALUES
 ('2024-01-15', 1),
 ('2024-03-22', 2),
 ('2023-11-10', 1),
-('2024-07-05', 3);
+('2024-07-05', 3),
+('2024-02-10', 5),
+('2024-04-18', 6),
+('2024-06-21', 7),
+('2023-12-05', 8),
+('2024-08-30', 9);
 
 INSERT INTO DetalleOrden (id_orden, id_producto, cantidad) VALUES
 (1, 1, 1),
@@ -57,4 +72,12 @@ INSERT INTO DetalleOrden (id_orden, id_producto, cantidad) VALUES
 (2, 4, 3),
 (3, 5, 1),
 (4, 2, 1),
-(4, 4, 2);
+(4, 4, 2),
+(5, 6, 1),
+(5, 7, 2),
+(6, 8, 1),
+(7, 9, 1),
+(7, 2, 1),
+(8, 10, 1),
+(9, 6, 2),
+(9, 4, 1);
