@@ -75,7 +75,22 @@ values
 
 select * from monedas;
 
+-- validando integridad referencial
 insert into transacciones (sender_user_id, receiver_user_id, valor, transaction_date)
 values (2,2,30000,'2026-02-12');
 
+insert into transacciones (sender_user_id, receiver_user_id, valor, transaction_date)
+values (1,3,30000,'2026-02-12');
+
+insert into transacciones (sender_user_id, receiver_user_id, valor, transaction_date)
+values (2,1,30000,'2026-02-12');
+
+insert into transacciones (sender_user_id, receiver_user_id, valor, transaction_date)
+values (3,2,30000,'2026-02-12');
+
 select * from transacciones;
+
+select usuarios.nombre, transacciones.transaction_id
+from usuarios
+join transacciones
+on usuarios.user_id = transacciones.sender_user_id
