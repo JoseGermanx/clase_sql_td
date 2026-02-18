@@ -1,0 +1,34 @@
+
+
+Estudiante
+-
+id int pk
+nombre varchar(50)
+fecha_nacimiento date
+direccion varchar(255)
+
+Profesor
+-
+id int pk
+nombre varchar(50)
+titulo varchar(100)
+
+Curso
+-
+id int pk
+nombre varchar(50)
+descripcion varchar(255)
+
+Inscripcion
+-
+id int pk
+fecha_inscripcion date
+estudiante_id int fk >- Estudiante.id
+curso_id int fk >- Curso.id
+
+Ensenanza
+-
+id int pk
+fecha_inicio date
+profesor_id int fk >- Profesor.id
+curso_id int fk >- Curso.id
