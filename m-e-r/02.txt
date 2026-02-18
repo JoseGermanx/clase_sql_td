@@ -1,0 +1,41 @@
+Libros
+-
+libro_id int pk
+titulo varchar(50)
+ISBN varchar(255) unique
+anio_publicacion date
+descripcion varchar(255)
+stock int
+
+
+Autores
+-
+autor_id int pk
+nombre varchar(50)
+nacionalidad varchar(50)
+
+
+Miembros
+-
+miembro_id int pk
+nombre varchar(50)
+direccion varchar(50)
+email varchar(50) unique
+fecha_registro date
+
+
+Prestamos 
+-
+prestamo_id int pk
+fecha_prestamo date
+fecha_limite date
+fecha_devolucion date null
+notas vachar(255)
+libro_id int fk >- Libros.libro_id
+miembro_id int fk >- Miembros.miembro_id
+
+AutoresDeLibros
+-
+id int pk
+libro_id int fk >- Libros.libro_id
+autor_id int fk >- Autores.autor_id
