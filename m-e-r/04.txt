@@ -1,0 +1,44 @@
+Usuarios
+-
+usuario_id int pk
+nombre varchar(50)
+email varchar unique
+password varchat(50)
+direccion varchat(255)
+
+
+Productos
+-
+producto_id int pk
+sku varchar(225) unique
+nombre varchar(100)
+descripcion varchar(255)
+precio decimal(10,2)
+stock int
+
+
+Ordenes
+-
+orden_id int pk
+fecha date
+total decimal(10,2)
+estado varchar(10)
+usuario_id int fk >- Usuarios.usuario_id
+
+
+OrdenItems
+-
+asignacion_id int pk
+cantidad int
+producto_id int fk >- Productos.producto_id
+orden_id int fk >- Ordenes.orden_id
+
+
+Pago
+-
+asignacion_id int pk
+metodo varchar(100)
+estado varchar(10)
+monto_total decimal(10,2)
+fecha_pago date
+orden_id int fk - Ordenes.orden_id
