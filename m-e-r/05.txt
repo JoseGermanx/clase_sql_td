@@ -1,0 +1,13 @@
+Libros
+-
+libroId int pk
+titulo varchar(50)
+anio_pub date
+autor varchar(50)
+
+
+CopiasLibros
+-
+copia_id int pk
+libroId int fk >- Libros.libroId
+copias int
