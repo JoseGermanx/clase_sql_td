@@ -1,0 +1,33 @@
+Empleados
+-
+empleado_id int pk
+nombre varchar(50)
+email varchar unique
+cargo varchat(50)
+
+
+Proyectos
+-
+proyecto_id int pk
+nombre varchar(100)
+descripcion varchar(255)
+fecha_inicio date
+fecha_finalizacion date
+
+
+Tareas
+-
+tarea_id int pk
+titulo varchar(50)
+descripcion varchar(100)
+estatus varchar(10)
+fecha_inicio date
+fecha_fin date
+proyecto_id int fk >- Proyectos.proyecto_id
+empleado_id int fk >- Empleados.empleado_id
+
+AsignacionProyecto
+-
+asignacion_id int pk
+proyecto_id int fk >- Proyectos.proyecto_id
+empleado_id int fk >- Empleados.empleado_id
