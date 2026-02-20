@@ -1,0 +1,22 @@
+Estudiantes
+-
+estudianteId int pk
+nombre varchar(50)
+apellido varchar(50)
+rut varchar(50)
+direccion varchar(50)
+telefono varchar(50)
+
+Cursos
+-
+cursoId int pk
+nombre varchar(50)
+descripcion varchar(255)
+
+
+Calificaciones
+-
+calificacionId int pk
+nota decimal(10,2)
+estudianteId int fk >- Estudiantes.estudianteId
+cursoId int fk >- Cursos.cursoId
